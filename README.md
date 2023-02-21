@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/9gflnxpmvc7qhg0x?svg=true)](https://ci.appveyor.com/project/Dasha/2-1selenium)
+![example workflow](https://github.com/Dasha019/2.1Selenium/actions/workflows/gradle.yml/badge.svg)
