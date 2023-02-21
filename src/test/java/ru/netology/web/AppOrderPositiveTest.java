@@ -20,8 +20,7 @@ public class AppOrderPositiveTest {
 
     @BeforeAll
     public static void setUpAll() {
-
-        System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
@@ -42,7 +41,6 @@ public class AppOrderPositiveTest {
 
     @Test
     public void shouldBeSuccessfulForm() {
-        driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Василий");
         elements.get(1).sendKeys("+79270000000");
@@ -54,7 +52,6 @@ public class AppOrderPositiveTest {
 
     @Test
     void shouldTestV2() {
-        driver.get("http://localhost:9999");
         WebElement form = driver.findElement(By.cssSelector("[data-test-id=callback-form]"));
         form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Василий");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79270000000");
